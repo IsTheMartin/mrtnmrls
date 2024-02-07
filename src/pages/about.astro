@@ -1,0 +1,69 @@
+---
+import "../../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import sandboarding from "../images/martin-sandboarding.webp";
+---
+
+<Layout title="Sobre mi | Martin">
+    <main>
+        <h1>Acerca de mi</h1>
+        <p>
+            Probablemente has llegado a este espacio para saber un poco acerca
+            de quien soy. Veámos.
+        </p>
+        <h2>En resumen</h2>
+        <p>
+            Martin Ignacio Morales, puedes llamarme Martín o Nacho (incluso
+            alguien me ha llamado Martinacho). Soy ingeniero mecátronico pero
+            profesionalmente estoy en el mundo de desarrollo móvil de Android
+            desde el 2020. Vivo actualmente en México.
+        </p>
+        <figure class="m-o" data-template="with">
+            <div class="m-m">
+                <Image src={sandboarding} alt="Me in a desertic trip" class="img" loading="lazy" height="600" width="610"/>
+            </div>
+            <figcaption>Practicando sandboarding, 2023</figcaption>
+        </figure>
+        <h2>Siendo un poco más extenso</h2>
+        <p>
+            Nací en Guadalajara, México el 17 de Junio. Desde mi infancia he sido un poco imperactivo, siempre he tenido la curiosidad de como funcionan las cosas y me dedicaba a desarmar calculadoras, relojes y otras cosas. Fui de los que terminaban las actividades rápido en la escuela para poder hacer otras cosas como dibujar o platicar con el compañero.
+        </p>
+        <br />
+        <p>
+            Me gradué en preparatoria con carrera de Informática y Computación
+            donde encontré la pasión por programación y crear software, sin embargo me gustaba mucho las materias de electrónica y circuitos,  de vez en cuando hacía explotar algunos capacitores.
+        </p>
+        <br />
+        <p>
+            Ingresé y me gradué de la ingeniería en Mecatrónica con la ilusión
+            de trabajar en la robótica, pero viendo la realidad de oportunidades
+            que había en el mercado laboral, decidí regresar al desarrollo de
+            software.
+        </p>
+        <br />
+        <p>
+            Al terminar la ingeniería, comencé a trabajar en algunas empresas
+            pequeñas para obtener experiencia, lamentablemente no encontraba mi
+            mejor versión profesional. Con la entrada de la pandemia de covid en
+            2020, hago otro cambio de profesión donde finalmente me siento bien
+            y me encanta lo que hago como desarrollador móvil de Android.
+        </p>
+        <br />
+        <p>
+            Actualmente trabajo como contratista como Android dev en una empresa
+            desde casa (bendito home office), algunas veces voy a la oficina,
+            solo cuando hay algún motivo por el cuál ir.
+        </p>
+        <h2>Conexión</h2>
+        <p>
+            Generalmente estoy en casa, ocasionalmente salgo de viaje o me
+            encuentro practicando algún deporte.
+        </p>
+        <br>
+        <p>
+            Sin embargo a veces estoy conectado en Instagram, haciendo código y
+            proyectos en Github o simplemente jugando con la Nintendo Switch.
+        </p>
+    </main>
+</Layout>
