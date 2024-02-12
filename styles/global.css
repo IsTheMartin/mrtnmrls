@@ -16,12 +16,12 @@
     border: 0;
     list-style: none;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
 }
 
 :active,
 :visited {
-    color: inherit
+    color: inherit;
 }
 
 :root {
@@ -50,23 +50,23 @@
     font-weight: var(--fw);
     font-style: var(--fst);
     background: var(--bg);
-    color: var(--t)
+    color: var(--t);
 }
 
 ::selection {
     background: var(--h);
-    color: var(--t)
+    color: var(--t);
 }
 
 body {
-    padding: 4rem 1.5rem 2rem
+    padding: 4rem 1.5rem 2rem;
 }
 
 *,
 ::after,
 ::before {
     font-size: var(--fs);
-    line-height: 1rem
+    line-height: 1rem;
 }
 
 blockquote,
@@ -85,25 +85,25 @@ pre,
 ul {
     margin-right: auto;
     margin-left: auto;
-    max-width: var(--ln)
+    max-width: var(--ln);
 }
 
 h2 {
     font-size: calc(var(--fs)*var(--sl));
     line-height: 1.3rem;
-    font-weight: 600
+    font-weight: 600;
 }
 
 h2,
 h3 {
     padding-top: .35rem;
-    padding-bottom: .35rem
+    padding-bottom: .35rem;
 }
 
 main h2,
 main h3,
 pre {
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
 }
 
 h3,
@@ -113,13 +113,13 @@ h5,
 h6 {
     font-size: calc(var(--fs)*var(--sm));
     line-height: 1rem;
-    font-weight: 600
+    font-weight: 600;
 }
 
 a {
     font-weight: inherit;
     font-size: inherit;
-    line-height: inherit
+    line-height: inherit;
 }
 
 main a,
@@ -128,28 +128,33 @@ section a {
     text-decoration-color: var(--h);
     text-decoration-skip-ink: none;
     text-decoration-thickness: .1rem;
-    transition: text-decoration .3s
+    transition: text-decoration .3s;
 }
 
 main a:hover,
 section a:hover {
-    text-decoration-color: var(--hl)
+    text-decoration-color: var(--hl);
 }
 
 h1>a {
-    text-decoration: none
+    text-decoration: none;
+}
+
+h1>a:hover {
+    text-decoration-color: var(--hl);
+    color: var(--hl);
 }
 
 h1,
 hr {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 }
 
 h1 {
     font-size: calc(var(--fs)*var(--sx));
     line-height: 1.3rem;
     padding-bottom: .35rem;
-    padding-top: .35rem
+    padding-top: .35rem;
 }
 
 h2,
@@ -158,11 +163,11 @@ h4,
 h5,
 h6 {
     text-align: center;
-    margin-top: 2rem
+    margin-top: 2rem;
 }
 
 p+p {
-    text-indent: 1rem
+    text-indent: 1rem;
 }
 
 hr {
@@ -171,18 +176,18 @@ hr {
     height: 2px;
     margin-top: 2rem;
     background: var(--bgl);
-    width: var(--ls)
+    width: var(--ls);
 }
 
 blockquote {
     margin-top: 1.5rem;
-    margin-bottom: 1.5rem
+    margin-bottom: 1.5rem;
 }
 
 b,
 h1,
 strong {
-    font-weight: 600
+    font-weight: 600;
 }
 
 .current,
@@ -190,18 +195,18 @@ blockquote p,
 em,
 i,
 nav .current {
-    font-style: italic
+    font-style: italic;
 }
 
 code {
     font-family: var(--fm);
     background: var(--tl);
     font-size: calc(var(--fs)*var(--ss));
-    line-height: .8rem
+    line-height: .8rem;
 }
 
 pre:not(:first-child) {
-    margin-top: 1rem
+    margin-top: 1rem;
 }
 
 pre code {
@@ -211,13 +216,13 @@ pre code {
     padding: 1rem;
     display: block;
     overflow-x: auto;
-    white-space: pre
+    white-space: pre;
 }
 
 p code {
     display: inline-block;
     text-indent: 0;
-    padding: 0 .25rem
+    padding: 0 .25rem;
 }
 
 dl,
@@ -225,27 +230,27 @@ ol,
 ul {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    list-style-position: inside
+    list-style-position: inside;
 }
 
 ol li {
-    list-style-type: upper-roman
+    list-style-type: upper-roman;
 }
 
 ul li {
-    list-style-type: circle
+    list-style-type: circle;
 }
 
 del {
     text-decoration: line-through;
     text-decoration-color: var(--t);
-    text-decoration-thickness: 3px
+    text-decoration-thickness: 3px;
 }
 
 .m-o {
     margin-top: 1rem;
     margin-bottom: 1rem;
-    max-width: var(--lw)
+    max-width: var(--lw);
 }
 
 .img {
@@ -260,7 +265,7 @@ del {
 .mv-i {
     padding-bottom: 56.25%;
     height: 0;
-    background: var(--bgl)
+    background: var(--bgl);
 }
 
 .mv-i embed,
@@ -270,63 +275,67 @@ del {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%
+    height: 100%;
 }
 
 figcaption,
 section {
     text-align: center;
-    font-style: italic
+    font-style: italic;
 }
 
 figcaption {
-    margin-top: 0.75rem
+    margin-top: 0.75rem;
 }
 
 [data-template=with] .m-m {
     padding: 0.5rem;
-    background: var(--bgl)
+    background: var(--bgl);
 }
 
 [data-template=with] .img {
-    box-shadow: 0 10px 17px rgba(0, 0, 0, .1)
+    box-shadow: 0 10px 17px rgba(0, 0, 0, .1);
 }
 
 main {
-    margin-bottom: 3rem
+    margin-bottom: 3rem;
 }
 
 section {
-    margin-bottom: 3rem
+    margin-bottom: 3rem;
 }
 
 section h3 {
-    font-style: normal
+    font-style: normal;
 }
 
 figcaption,
 section p {
     font-size: calc(var(--fs)*var(--ss));
-    line-height: .8rem
+    line-height: .8rem;
+}
+
+footer nav {
+    margin-bottom: 3rem;
 }
 
 nav:last-child {
-    margin-bottom: 7rem
+    margin-bottom: 7rem;
 }
 
 details h3 {
     display: flex;
     align-items: center;
-    margin-top: 1rem
+    margin-top: 1rem;
 }
 
 nav>h3:first-of-type {
     text-align: center;
-    display: block
+    display: block;
 }
 
 h3 span:last-child {
-    margin-left: auto
+    margin-left: auto;
 }
 
 details>a,
@@ -334,13 +343,13 @@ nav>a {
     transition: color .3s ease-out;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-gap: .3rem
+    grid-gap: .3rem;
 }
 
 details>a:hover,
 nav>a:hover,
 summary:hover {
-    color: var(--tm)
+    color: var(--hl);
 }
 
 nav a p {
@@ -348,7 +357,7 @@ nav a p {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%
+    width: 100%;
 }
 
 nav hr {
@@ -356,25 +365,25 @@ nav hr {
     align-self: end;
     height: 1px;
     border: 0;
-    border-bottom: 1px dotted var(--t);
+    border-bottom: 1px dashed var(--t);
     opacity: .25;
     min-width: 1rem;
-    width: 100%
+    width: 100%;
 }
 
 details {
-    text-align: center
+    text-align: center;
 }
 
 details summary::-webkit-details-marker,
 details[open] summary {
-    display: none
+    display: none;
 }
 
 footer a,
 summary {
     font-size: calc(var(--fs)*var(--ss));
-    line-height: .8rem
+    line-height: .8rem;
 }
 
 summary {
@@ -385,29 +394,38 @@ summary {
     border: 1px solid var(--tl);
     border-radius: 999px;
     transition: color .3s linear;
-    cursor: pointer
+    cursor: pointer;
 }
 
 footer {
     margin-top: 2rem;
-    text-align: center
+    text-align: center;
 }
 
 footer a {
-    margin: 0 .15rem
+    margin: 0 .15rem;
+}
+
+.social {
+    margin-top: 0.15rem;
+}
+
+.routes a:hover, 
+.social a:hover {
+    color: var(--hl);
 }
 
 @media (min-width: 500px) {
     :root {
         --fs: 17px;
-        --fl: 32px
+        --fl: 32px;
     }
 }
 
 @media (min-width: 2000px) {
     :root {
         --fs: 20px;
-        --fl: 38px
+        --fl: 38px;
     }
 }
 
@@ -416,11 +434,11 @@ footer a {
     dl,
     ol,
     ul {
-        list-style-position: outside
+        list-style-position: outside;
     }
 
     [data-template=with] .m-m {
-        padding: 1rem
+        padding: 1rem;
     }
 }
 

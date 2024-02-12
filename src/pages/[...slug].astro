@@ -18,7 +18,7 @@ const { Content } = await post.render();
 
 <PostLayout title={post.data.title}>
     <main>
-      <h1>{post.data.title}</h1>
+      <h1><a href="/">{post.data.title}</a></h1>
         <Content />
         <br>
         <p><FormattedDate date={post.data.date} lang={post.data.lang}/></p>

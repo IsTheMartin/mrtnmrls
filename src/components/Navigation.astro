@@ -1,9 +1,25 @@
 ---
+import "../../styles/global.css";
+import { getCollection } from "astro:content"
+import FormattedDate from "./FormattedDate.astro";
 
+const posts = await getCollection("post", ({ data }) => {
+	return data.lang == "es"
+});
+posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+console.log(posts);
 ---
 
-<>
-    <a href="/">Inicio</a>
-    <a href="/now">Ahora</a>
-    <a href="/about">Sobre mi</a>
-</>
+<nav>
+        {
+            posts.map((post) => (
+                <a href={`/${post.slug}`}>
+                    <p>{post.data.title}</p>
+                    <hr>
+                    <span>
+                        <FormattedDate date={post.data.date} lang={post.data.lang}/>
+                    </span>
+                </a>
+            ))
+        }
+</nav>

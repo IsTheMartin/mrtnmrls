@@ -14,7 +14,7 @@ const { Content } = await latestPost.render()
 
 <Layout title={latestPost.data.title}>
 	<main>
-		<h1>{latestPost.data.title}</h1>
+		<h1><a href="/">{latestPost.data.title}</a></h1>
 		<Content />
 		<br>
 		<p><FormattedDate date={latestPost.data.date} lang={latestPost.data.lang}/></p>
