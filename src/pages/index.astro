@@ -1,49 +1,22 @@
 ---
-import "../../styles/global.css";
-import Layout from "../layouts/Layout.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+import "@styles/global.css";
+import Layout from "@layouts/Layout.astro";
+import { getCollection } from "astro:content"
+
+const posts = await getCollection("post", ({ data }) => {
+	return data.lang == "es"
+});
+posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+const latestPost = posts[0];
+const { Content } = await latestPost.render()
 ---
 
-<Layout title="Despegue | Martin">
+<Layout title={latestPost.data.title}>
 	<main>
-		<h1>Despegue 🚀</h1>
-		<p>
-			Llevo algo de tiempo en que suelo escribir cosas que navegan en mi
-			mente, experiencias o simplemente algo que asalta mi atención. He
-			creado un jardín digital donde viven esas notas y que generalmente
-			me agrada leerlas de vez en cuando.
-		</p>
+		<h1><a href="/">{latestPost.data.title}</a></h1>
+		<Content />
 		<br>
-		<p>
-			Tengo el firme pensamiento sobre compartir el conocimiento a todos,
-			pero también las experiencias e ideas. No importa la forma en que es
-			compartida, lo importante es el contenido. Siento que este proyecto
-			me ayudará en algún momento de mi vida, alguien mencionó una vez:
-			"quien no conoce su historia está condenado a repetirla".
-		</p>
-		<br>
-		<p>
-			Sobre la idea anterior, me ha motivado a crear este proyecto, además
-			de mejorar mi habilidad de escritura y el aprender a desarrollar un
-			proyecto de tipo web (es primera vez que hago un proyecto como
-			este). La principal intención sobre este proyecto es compartir
-			algunos posts sobre lo que ha navegado en mi cabeza y sobre lo que
-			he vivido.
-		</p>
-		<br>
-		<p>
-			No quiero crear un journal donde actualice cada día, eso sería algo
-			forzoso para mí, la idea es que sea natural o intentar ser natural.
-			Espero que los posts no sean largos, almenos unos dos o tres minutos
-			en leerse.
-		</p>
-		<br>
-		<p>
-			Mantengo una pequeña esperanza de que este proyecto sirva de puente para conectar con otras personas y crear un vínculo fuera de las redes sociales convencionales. Espero que así sea.
-		</p>
-		<br>
-		<p>
-			Por último, agradezco a <a href="https://manuelmoreale.com/">Manu</a
-			> por ser una gran inspiración.
-		</p>
+		<p><FormattedDate date={latestPost.data.date} lang={latestPost.data.lang}/></p>
 	</main>
 </Layout>

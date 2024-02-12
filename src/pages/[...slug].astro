@@ -1,0 +1,26 @@
+---
+import PostLayout from "@layouts/PostLayout.astro";
+import FormattedDate from "@components/FormattedDate.astro"
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("post")
+
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+} 
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<PostLayout title={post.data.title}>
+    <main>
+      <h1><a href="/">{post.data.title}</a></h1>
+        <Content />
+        <br>
+        <p><FormattedDate date={post.data.date} lang={post.data.lang}/></p>
+    </main>
+</PostLayout>
