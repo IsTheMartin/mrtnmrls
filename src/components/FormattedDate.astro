@@ -1,7 +1,7 @@
 ---
 interface Props {
 	date: Date;
-	lang: String;
+	lang: string;
 }
 
 const { date, lang } = Astro.props;
@@ -17,6 +17,7 @@ if (lang == 'en') {
 			year: 'numeric',
 			month: 'short',
 			day: 'numeric',
+			timeZone: 'UTC'
 		})
 	}
 </time>

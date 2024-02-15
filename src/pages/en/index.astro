@@ -5,7 +5,7 @@ import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content"
 
 const posts = await getCollection("post", ({ data }) => {
-	return data.lang == "es"
+	return data.lang == "en"
 });
 posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 const latestPost = posts[0];
