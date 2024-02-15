@@ -7,5 +7,9 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   integrations: [mdx()],
   output: "hybrid",
-  adapter: netlify()
+  adapter: netlify(),
+  i18n: {
+    defaultLocale: "es",
+    locales: ["es", "en"]
+  }
 });
