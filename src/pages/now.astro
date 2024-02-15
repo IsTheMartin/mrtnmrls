@@ -1,31 +1,36 @@
 ---
 import "@styles/global.css"
 import Layout from "@layouts/Layout.astro";
+import Home from "@components/Home.astro";
+
+const title = "Qué hago en estos momentos?";
+const lang = "es";
 ---
 
-<Layout title="Ahora | Martin" lang="es">
+<Layout title={title} lang={lang}>
     <main>
-        <h1>Qué hago en estos momentos?</h1>
+        <Home title={title} lang={lang} />
         <ul>
             <li>
-                Continuo con el proyecto de los cruceros
+                Continuo con el <a href="https://www.royalcaribbean.com/">proyecto de los cruceros</a>
             </li>
             <li>
-                El equipo sigue invicto en el torneo de volleyball. Quedan 5 partidos para terminar la primera ronda
+                Planeo mi siguiente viaje a un lugar muy especial
             </li>
             <li>
-                Aún no termino el libro <a
-                    href="https://www.goodreads.com/book/show/1212515.El_mundo_de_Sof_a"
-                    >El mundo de Sofía</a>
+                El equipo sigue invicto en el torneo de volleyball. Quedan tres partidos para terminar la primera ronda
             </li>
             <li>
-                Operación Kasacho (se está atrasando mucho, no está en mis manos)
+                Aún no termino el libro <a href="https://www.goodreads.com/book/show/1212515.El_mundo_de_Sof_a">El mundo de Sofía</a>
+            </li>
+            <li>
+                Operación Kasacho (terminando la segunda fase)
             </li>
             <li>
                 Sigo con mejoras para este espacio
             </li>
         </ul>
         <br />
-        <p>Actualizado el 2 de Febrero de 2024</p>
+        <p>Actualizado el 14 de Febrero de 2024</p>
     </main>
 </Layout>

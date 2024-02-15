@@ -2,6 +2,7 @@
 import FormattedDate from "@components/FormattedDate.astro";
 import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
+import Home from "@components/Home.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("post");
@@ -18,7 +19,7 @@ const { Content } = await post.render();
 
 <Layout title={post.data.title} lang={post.data.lang}>
   <main>
-    <h1><a href="/">{post.data.title}</a></h1>
+    <Home title={post.data.title} lang={post.data.lang} />
     <Content />
     <br />
     <p><FormattedDate date={post.data.date} lang={post.data.lang} /></p>

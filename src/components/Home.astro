@@ -1,0 +1,9 @@
+---
+const { title, lang } = Astro.props;
+let homeLink = "/";
+if (lang == "en") {
+    homeLink = homeLink + "en";
+}
+---
+
+<h1><a href={homeLink}>{title}</a></h1>

@@ -3,18 +3,20 @@ import FormattedDate from "@components/FormattedDate.astro";
 import "@styles/global.css";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content"
+import Home from "@components/Home.astro";
 
 const posts = await getCollection("post", ({ data }) => {
 	return data.lang == "en"
 });
 posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+
 const latestPost = posts[0];
 const { Content } = await latestPost.render()
 ---
 
 <Layout title={latestPost.data.title} lang={latestPost.data.lang}>
 	<main>
-		<h1><a href="/">{latestPost.data.title}</a></h1>
+		<Home title={latestPost.data.title} lang={latestPost.data.lang} />
 		<Content />
 		<br>
 		<p><FormattedDate date={latestPost.data.date} lang={latestPost.data.lang}/></p>
