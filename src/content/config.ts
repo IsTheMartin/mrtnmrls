@@ -4,8 +4,8 @@ const posts = defineCollection({
     schema: z.object({
         title: z.string().max(50),
         date: z.date(),
-        slug: z.string(),
-        lang: z.string().max(2)
+        lang: z.string().max(2),
+        description: z.string()
     })
 })
 

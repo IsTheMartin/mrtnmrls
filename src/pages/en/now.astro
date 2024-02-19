@@ -1,0 +1,36 @@
+---
+import "@styles/global.css"
+import Layout from "@layouts/Layout.astro";
+import Home from "@components/Home.astro";
+
+const title = "What I'm doing now?";
+const lang = "en";
+---
+
+<Layout title={title} lang={lang}>
+    <main>
+        <Home title={title} lang={lang} />
+        <ul>
+            <li>
+                I'm still working on <a href="https://www.royalcaribbean.com/">cruises project</a>
+            </li>
+            <li>
+                Planning my next trip to special place
+            </li>
+            <li>
+                Volleyball team remains undefeated, three more matches to finish the first round
+            </li>
+            <li>
+                I haven't finished the book <a href="https://www.goodreads.com/book/show/10959.Sophie_s_World">Sophie's world</a> yet
+            </li>
+            <li>
+                Kasacho operation (finishing second phase)
+            </li>
+            <li>
+                I'm still developing this site
+            </li>
+        </ul>
+        <br />
+        <p>Last update on February 14th, 2024</p>
+    </main>
+</Layout>

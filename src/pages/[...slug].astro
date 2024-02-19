@@ -1,26 +1,27 @@
 ---
-import PostLayout from "@layouts/PostLayout.astro";
-import FormattedDate from "@components/FormattedDate.astro"
+import FormattedDate from "@components/FormattedDate.astro";
 import { getCollection } from "astro:content";
+import Layout from "@layouts/Layout.astro";
+import Home from "@components/Home.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("post")
+  const posts = await getCollection("post");
 
-  return posts.map(post => ({
+  return posts.map((post) => ({
     params: { slug: post.slug },
-    props: { post }
+    props: { post },
   }));
-} 
+}
 
 const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<PostLayout title={post.data.title}>
-    <main>
-      <h1><a href="/">{post.data.title}</a></h1>
-        <Content />
-        <br>
-        <p><FormattedDate date={post.data.date} lang={post.data.lang}/></p>
-    </main>
-</PostLayout>
+<Layout title={post.data.title} lang={post.data.lang}>
+  <main>
+    <Home title={post.data.title} lang={post.data.lang} />
+    <Content />
+    <br />
+    <p><FormattedDate date={post.data.date} lang={post.data.lang} /></p>
+  </main>
+</Layout>
