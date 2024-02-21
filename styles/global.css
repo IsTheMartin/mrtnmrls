@@ -29,6 +29,7 @@
     --bgl: #DDF2FD;
     --h: #9BBEC8;
     --hl: #427D9D;
+    --bimg: #d2eefc;
     --t: #444;
     --tm: #888;
     --tl: #F2F2F2;
@@ -256,10 +257,9 @@ del {
 .img {
     display: block;
     max-width: 100%;
-    height: auto;
+    max-height: 80vh;
     border-radius: 2px;
     margin: auto;
-    padding: 0 0 1rem;
 }
 
 .mv-i {
@@ -290,7 +290,7 @@ figcaption {
 
 [data-template=with] .m-m {
     padding: 0.5rem;
-    background: var(--bgl);
+    background: var(--bimg);
 }
 
 [data-template=with] .img {
@@ -438,7 +438,7 @@ footer a {
     }
 
     [data-template=with] .m-m {
-        padding: 1rem;
+        padding: 2rem;
     }
 }
 
