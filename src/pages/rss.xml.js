@@ -16,7 +16,6 @@ export async function GET(context) {
             title: post.data.title,
             pubDate: post.data.date,
             link: `/${post.slug}`,
-            content: `<![CDATA[${sanitizeHtml(parser.render(post.body))}]]>`,
             description: `<![CDATA[${sanitizeHtml(parser.render(post.body))}]]>`
         })),
         customData: `<language>en-us</language>`,
