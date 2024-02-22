@@ -5,7 +5,7 @@ import Layout from "@layouts/Layout.astro";
 import Home from "@components/Home.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("post");
+  const posts = await getCollection("posts");
 
   return posts.map((post) => ({
     params: { slug: post.slug },
@@ -22,6 +22,6 @@ const { Content } = await post.render();
     <Home title={post.data.title} lang={post.data.lang} />
     <Content />
     <br />
-    <p><FormattedDate date={post.data.date} lang={post.data.lang} /></p>
+    <p><FormattedDate date={post.data.pubDate} lang={post.data.lang} /></p>
   </main>
 </Layout>
