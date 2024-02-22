@@ -1,5 +1,10 @@
 import rss from '@astrojs/rss';
 import { getCollection } from "astro:content";
+import sanitizeHtml from 'sanitize-html';
+import MarkdownIt from 'markdown-it';
+
+// JSX components will not be detected in MarkdownIt
+const markdownParser = new MarkdownIt();
 
 export async function GET(context) {
 
@@ -14,7 +19,7 @@ export async function GET(context) {
             author: post.data.author,
             pubDate: post.data.pubDate,
             link: `/${post.slug}`,
-            description: post.body
+            description: `<![CDATA[${sanitizeHtml(markdownParser.render(post.body))}]]>`,
         })),
         customData: `<language>en-us</language>`,
     });
