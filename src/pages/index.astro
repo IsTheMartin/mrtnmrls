@@ -4,10 +4,10 @@ import "@styles/global.css";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content"
 
-const posts = await getCollection("post", ({ data }) => {
+const posts = await getCollection("posts", ({ data }) => {
 	return data.lang == "es"
 });
-posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+posts.sort((a, b) => Date.parse(b.data.pubDate.toString()) - Date.parse(a.data.pubDate.toString()));
 
 const latestPost = posts[0];
 const { Content } = await latestPost.render();
@@ -18,6 +18,6 @@ const { Content } = await latestPost.render();
 		<h1><a href="/">{latestPost.data.title}</a></h1>
 		<Content />
 		<br>
-		<p><FormattedDate date={latestPost.data.date} lang={latestPost.data.lang}/></p>
+		<p><FormattedDate date={latestPost.data.pubDate} lang={latestPost.data.lang}/></p>
 	</main>
 </Layout>

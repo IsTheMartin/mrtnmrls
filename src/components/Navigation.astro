@@ -9,10 +9,10 @@ interface Props {
 
 const { lang } = Astro.props;
 
-const posts = await getCollection("post", ({ data }) => {
+const posts = await getCollection("posts", ({ data }) => {
     return data.lang == lang;
 });
-posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
+posts.sort((a, b) => Date.parse(b.data.pubDate.toString()) - Date.parse(a.data.pubDate.toString()));
 ---
 
 <nav>
@@ -23,7 +23,7 @@ posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
                 <hr />
                 <span>
                     <FormattedDate
-                        date={post.data.date}
+                        date={post.data.pubDate}
                         lang={post.data.lang}
                     />
                 </span>
