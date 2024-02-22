@@ -11,7 +11,7 @@ export async function GET(context) {
     return rss({
         title: 'Martin Morales RSS Feed',
         description: 'A small collection of thoughts, experiences and other things.',
-        site: context.site,
+        site: 'https://ismartn.netlify.app/',
         items: posts.map((post) => ({
             title: post.data.title,
             pubDate: post.data.date,
