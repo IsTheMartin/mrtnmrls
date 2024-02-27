@@ -4,16 +4,13 @@ import { getCollection } from "astro:content";
 import Layout from "@layouts/Layout.astro";
 import Home from "@components/Home.astro";
 
-export async function getStaticPaths() {
-  const posts = await getCollection("posts");
+const { slug } = Astro.params;
+const posts = await getCollection("posts");
+const post = posts.find((post) => post.slug === slug);
 
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
-  }));
-}
+const redirectPage = slug.includes("en/") ? "/en/404" : "/404";
+if (!post) return Astro.redirect(redirectPage);
 
-const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
