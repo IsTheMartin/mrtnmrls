@@ -1,0 +1,19 @@
+---
+import "@styles/global.css";
+import Layout404 from "@layouts/Layout404.astro";
+
+const title = "Page not found";
+const lang = "en";
+---
+
+<Layout404 title={title} lang={lang}>
+  <main>
+    <h1><a href="/en">This page is missing</a></h1>
+    <p>
+      And I do not found it, maybe url is wrong. Try to edit it or <a href="/en"
+        >go back home.</a>
+    </p>
+    <br />
+    <p>One tip: titles take us to home.</p>
+  </main>
+</Layout404>

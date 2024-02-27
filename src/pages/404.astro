@@ -1,35 +1,19 @@
 ---
 import "@styles/global.css";
-import Home from "@components/Home.astro";
+import Layout404 from "@layouts/Layout404.astro";
 
-const title = "Page not found"
+const title = "Página no encontrada";
+const lang = "es";
 ---
 
-<!doctype html>
-<html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Martin' space" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title} | Martin</title>
-	</head>
-	<body>
-        <main>
-        <Home title="Página no encontrada" lang="es" />
-        <p>
-            Parece que no he encontrado esta página en este sitio. Puedes intentar editar la URL pero si no quieres hacerlo te dejo este link a <a href="/">Inicio</a>. Espero no verte tan seguido en esta página.
-            <br>
-            Un consejo: Los títulos te llevan a casa.
-        </p>        
-        <br>
-        <Home title="Page not found" lang="en" />
-        <p>
-            It seems I have not found this page in this site. You can try to edit URL, however if you don't want do it, I let this link to <a href="/en">Home</a>. I hope don't see you again in this page.
-            <br>
-            One tip: Titles take you home
-        </p>
-    </main>
-	</body>
-</html>
+<Layout404 title={title} lang={lang}>
+  <main>
+    <h1><a href="/">Se ha perdido esta página</a></h1>
+    <p>
+      Y no la he localizado, probablemente la url no sea la correcta. Intentar
+      editarla o <a href="/">regresa al inicio.</a>
+    </p>
+    <br />
+    <p>Un tip: los títulos nos llevan a casa.</p>
+  </main>
+</Layout404>
