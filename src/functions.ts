@@ -23,6 +23,10 @@ export function formatBodyForRSS(dirtyBody) {
     return `<![CDATA[${sanitizedHtml}]]>`
 };
 
+export function getHomeLink(lang) {
+    return lang == "en" ? "/en" : "/"
+}
+
 export async function getAllPosts() {
     const posts = await getCollection("posts");
 
