@@ -1,17 +1,10 @@
 import rss from "@astrojs/rss";
-import { getCollection } from "astro:content";
 import { RSS } from "src/constants";
-import { formatBodyForRSS } from "src/functions";
-
-posts.sort(
-  (a, b) =>
-    Date.parse(b.data.pubDate.toString()) -
-    Date.parse(a.data.pubDate.toString())
-);
-const lastPubDate = posts[0].data.pubDate;
+import { formatBodyForRSS, getAllPosts } from "src/functions";
 
 export async function GET(context) {
-  const posts = await getCollection("posts");
+  const posts = await getAllPosts();
+  const lastPubDate = posts[0].data.pubDate;
 
   return rss({
     title: RSS.title,
