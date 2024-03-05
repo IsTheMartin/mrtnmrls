@@ -1,0 +1,34 @@
+---
+import "@styles/global.css";
+import MinimalLayout from "@layouts/MinimalLayout.astro";
+import { getCollection } from "astro:content";
+import FormattedDate from "@components/FormattedDate.astro";
+
+const lang = "es"
+const title = "Mis posts"
+
+const posts = await getCollection("posts", ({ data }) => {
+    return data.lang == lang;
+});
+posts.sort((a, b) => Date.parse(b.data.pubDate.toString()) - Date.parse(a.data.pubDate.toString()));
+---
+
+<MinimalLayout title={title} lang={lang}>
+    <h1>Posts</h1>
+    <nav>
+    {
+        posts.map((post) => (
+            <a href={`/${post.slug}`}>
+                <span>
+                    <FormattedDate
+                        date={post.data.pubDate}
+                        lang={post.data.lang}
+                    />
+                </span>
+                <hr />
+                <p>{post.data.title}</p>
+            </a>
+        ))
+    }
+    </nav>
+</MinimalLayout>
