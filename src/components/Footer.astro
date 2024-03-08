@@ -13,6 +13,7 @@ const esLinks = [
     { route: "/", menu: "Inicio" },
     { route: "/now", menu: "Ahora" },
     { route: "/about", menu: "Sobre mí" },
+    { route: "/posts", menu: "Posts"},
     { route: "/rss.xml", menu: "RSS" },
     { route: "/en", menu: "English" },
 ];
@@ -21,6 +22,7 @@ const enLinks = [
     { route: "/en", menu: "Home" },
     { route: "/en/now", menu: "Now" },
     { route: "/en/about", menu: "About me" },
+    { route: "/en/posts", menu: "Posts"},
     { route: "/rss.xml", menu: "RSS" },
     { route: "/", menu: "Español" },
 ];
@@ -38,7 +40,6 @@ if (lang == "en") {
 ---
 
 <footer>
-    <Navigation lang={lang} />
     <div class="routes">
         {links.map((link) => <a href={link.route}>{link.menu}</a>)}
     </div>

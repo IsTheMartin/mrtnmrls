@@ -1,0 +1,30 @@
+---
+import "@styles/global.css";
+import { getHomeLink } from "src/functions";
+
+interface Props {
+  title: string;
+  date: Date;
+  lang: string;
+}
+
+const { title, date, lang } = Astro.props;
+
+const locale = lang == "es" ? "es-mx" : "en-us";
+const homeLink = getHomeLink(lang);
+---
+
+<div class="post-header">
+  <h1><a href={homeLink}>{title}</a></h1>
+  <p>
+    <time datetime={date.toISOString()}>
+      {
+        date.toLocaleDateString(locale, {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
+      }
+    </time>
+  </p>
+</div>
