@@ -1,0 +1,21 @@
+---
+interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+---
+
+<section>
+  {
+    lang === "es" ? (
+      <p>
+        Bueno, hasta aquí hemos llegado a lo largo de este post, te agradezco por haber llegado a este punto. Pronto habrá una nueva entrada y con un lector <a href="/rss.xml">RSS</a> estarás al tanto, o si gustas leer algún post pasado aquí te dejo mi <a href="/posts">lista</a>. Hasta luego!
+      </p>
+    ) : (
+      <p>
+        Hey! Thank you for reading this far in the post. There will be a new entry soon, yo can use <a href="/rss.xml">RSS</a> reader to be notified. If you want to read previous posts, check out my <a href="/en/posts">list</a>. Cheers!
+      </p>
+    )
+  }
+</section>

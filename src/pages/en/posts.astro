@@ -5,28 +5,25 @@ import { getPostsByLanguage } from "src/functions";
 import FormattedDate from "@components/FormattedDate.astro";
 import Home from "@components/Home.astro";
 
-const lang = "en"
-const title = "My posts"
+const lang = "en";
+const title = "My posts";
 
-const posts = await getPostsByLanguage(lang)
+const posts = await getPostsByLanguage(lang);
 ---
 
 <MinimalLayout title={title} lang={lang}>
-    <Home title={title} lang={lang} />
-    <nav>
+  <Home title={title} lang={lang} />
+  <nav>
     {
-        posts.map((post) => (
-            <a href={`/${post.slug}`}>
-                <span>
-                    <FormattedDate
-                        date={post.data.pubDate}
-                        lang={post.data.lang}
-                    />
-                </span>
-                <hr />
-                <p>{post.data.title}</p>
-            </a>
-        ))
+      posts.map((post) => (
+        <a href={`/${post.slug}`}>
+          <span>
+            <FormattedDate date={post.data.pubDate} lang={post.data.lang} />
+          </span>
+          <hr />
+          <p>{post.data.title}</p>
+        </a>
+      ))
     }
-    </nav>
+  </nav>
 </MinimalLayout>
