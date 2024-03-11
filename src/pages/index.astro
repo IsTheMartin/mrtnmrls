@@ -1,5 +1,5 @@
 ---
-import FormattedDate from "@components/FormattedDate.astro";
+import PostHeader from "@components/PostHeader.astro"
 import "@styles/global.css";
 import Layout from "@layouts/Layout.astro";
 import { getCollection } from "astro:content"
@@ -15,9 +15,7 @@ const { Content } = await latestPost.render();
 
 <Layout title={latestPost.data.title} lang={latestPost.data.lang}>
 	<main>
-		<h1><a href="/">{latestPost.data.title}</a></h1>
+		<PostHeader title={latestPost.data.title} date={latestPost.data.pubDate} lang={latestPost.data.lang}/>
 		<Content />
-		<br>
-		<p><FormattedDate date={latestPost.data.pubDate} lang={latestPost.data.lang}/></p>
 	</main>
 </Layout>

@@ -1,8 +1,7 @@
 ---
-import FormattedDate from "@components/FormattedDate.astro";
 import { getCollection } from "astro:content";
-import Layout from "@layouts/Layout.astro";
-import Home from "@components/Home.astro";
+import PostLayout from "@layouts/PostLayout.astro";
+import PostHeader from "@components/PostHeader.astro";
 
 const { slug } = Astro.params;
 const posts = await getCollection("posts");
@@ -14,11 +13,9 @@ if (!post) return Astro.redirect(redirectPage);
 const { Content } = await post.render();
 ---
 
-<Layout title={post.data.title} lang={post.data.lang}>
+<PostLayout title={post.data.title} lang={post.data.lang}>
   <main>
-    <Home title={post.data.title} lang={post.data.lang} />
+    <PostHeader title={post.data.title} date={post.data.pubDate} lang={post.data.lang}/>
     <Content />
-    <br />
-    <p><FormattedDate date={post.data.pubDate} lang={post.data.lang} /></p>
   </main>
-</Layout>
+</PostLayout>

@@ -1,9 +1,12 @@
 ---
+import { getHomeLink } from "src/functions";
+
 const { title, lang } = Astro.props;
-let homeLink = "/";
-if (lang == "en") {
-    homeLink = homeLink + "en";
-}
+const homeLink = getHomeLink(lang);
 ---
 
-<h1><a href={homeLink}>{title}</a></h1>
+<h1>
+    <a href={homeLink}>
+        {title}
+    </a>
+</h1>
