@@ -1,0 +1,36 @@
+---
+import "@styles/global.css";
+import Layout from "@layouts/Layout.astro";
+import Home from "@components/Home.astro";
+
+const title = "Qué hago en estos momentos?";
+const lang = "es";
+---
+
+<Layout title={title} lang={lang}>
+  <main>
+    <Home title={title} lang={lang} />
+    <ul>
+      <li>
+        Continuo con el <a href="https://www.royalcaribbean.com/"
+          >proyecto de los cruceros</a
+        >
+      </li>
+      <li>Planeo mi siguiente viaje a un lugar muy especial</li>
+      <li>
+        El equipo sigue invicto en el torneo de volleyball. Quedan tres partidos
+        para terminar la primera ronda
+      </li>
+      <li>
+        Leyendo <a
+          href="https://www.goodreads.com/book/show/147483.Rebeli_n_en_la_granja"
+          >Rebelión en la granja</a
+        >
+      </li>
+      <li>Operación Kasacho (primer intento fallido)</li>
+      <li>Sigo con mejoras para este sitio</li>
+    </ul>
+    <br />
+    <p>Actualizado el 26 de Febrero de 2024</p>
+  </main>
+</Layout>

@@ -24,7 +24,7 @@ export function formatBodyForRSS(dirtyBody) {
 };
 
 export function getHomeLink(lang) {
-    return lang == "en" ? "/en" : "/"
+    return lang == "en" ? "/" : "/es"
 }
 
 export async function getAllPosts() {

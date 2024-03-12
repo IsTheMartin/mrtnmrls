@@ -7,7 +7,7 @@ const { slug } = Astro.params;
 const posts = await getCollection("posts");
 const post = posts.find((post) => post.slug === slug);
 
-const redirectPage = slug.includes("en/") ? "/en/404" : "/404";
+const redirectPage = slug.includes("es/") ? "/es/404" : "/404";
 if (!post) return Astro.redirect(redirectPage);
 
 const { Content } = await post.render();
@@ -15,7 +15,11 @@ const { Content } = await post.render();
 
 <PostLayout title={post.data.title} lang={post.data.lang}>
   <main>
-    <PostHeader title={post.data.title} date={post.data.pubDate} lang={post.data.lang}/>
+    <PostHeader
+      title={post.data.title}
+      date={post.data.pubDate}
+      lang={post.data.lang}
+    />
     <Content />
   </main>
 </PostLayout>
