@@ -1,15 +1,16 @@
 ---
 import "@styles/global.css";
 import Layout from "@layouts/Layout.astro";
-import Home from "@components/Home.astro";
+import PostHeader from "@components/PostHeader.astro";
 
 const title = "Qué hago en estos momentos?";
+const date = new Date("2024-03-12");
 const lang = "es";
 ---
 
 <Layout title={title} lang={lang}>
   <main>
-    <Home title={title} lang={lang} />
+    <PostHeader title={title} date={date} lang={lang} />
     <ul>
       <li>
         Continuo con el <a href="https://www.royalcaribbean.com/"
@@ -30,7 +31,5 @@ const lang = "es";
       <li>Operación Kasacho (primer intento fallido)</li>
       <li>Sigo con mejoras para este sitio</li>
     </ul>
-    <br />
-    <p>Actualizado el 26 de Febrero de 2024</p>
   </main>
 </Layout>

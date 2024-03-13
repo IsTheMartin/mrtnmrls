@@ -1,15 +1,16 @@
 ---
 import "@styles/global.css";
 import Layout from "@layouts/Layout.astro";
-import Home from "@components/Home.astro";
+import PostHeader from "@components/PostHeader.astro";
 
 const title = "What I'm doing now?";
+const date = new Date("2024-03-12");
 const lang = "en";
 ---
 
 <Layout title={title} lang={lang}>
   <main>
-    <Home title={title} lang={lang} />
+    <PostHeader title={title} date={date} lang={lang} />
     <ul>
       <li>
         I'm still working on <a href="https://www.royalcaribbean.com/"
@@ -29,7 +30,5 @@ const lang = "en";
       <li>Kasacho operation (first attempt failed)</li>
       <li>I'm still developing this site</li>
     </ul>
-    <br />
-    <p>Last update on February 26th, 2024</p>
   </main>
 </Layout>

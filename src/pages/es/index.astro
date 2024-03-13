@@ -2,18 +2,9 @@
 import "@styles/global.css";
 import PostHeader from "@components/PostHeader.astro";
 import PostLayout from "@layouts/PostLayout.astro";
-import { getCollection } from "astro:content";
+import { getLastPostByLanguage } from "src/functions";
 
-const posts = await getCollection("posts", ({ data }) => {
-  return data.lang == "es";
-});
-posts.sort(
-  (a, b) =>
-    Date.parse(b.data.pubDate.toString()) -
-    Date.parse(a.data.pubDate.toString())
-);
-
-const latestPost = posts[0];
+const latestPost = await getLastPostByLanguage("es");
 const { Content } = await latestPost.render();
 ---
 

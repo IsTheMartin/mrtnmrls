@@ -169,6 +169,7 @@ h6 {
 
 p+p {
     text-indent: 1rem;
+    margin-top: 0.5rem;
 }
 
 hr {
@@ -425,7 +426,7 @@ footer a {
 
 @media (min-width: 500px) {
     :root {
-        --fs: 17px;
+        --fs: 16px;
         --fl: 32px;
     }
 }
