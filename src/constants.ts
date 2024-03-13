@@ -18,7 +18,6 @@ export const esLinks = [
     { route: "/es/now", menu: "Ahora" },
     { route: "/es/about", menu: "Sobre mí" },
     { route: "/es/posts", menu: "Posts"},
-    { route: "/rss.xml", menu: "RSS" },
     { route: "/", menu: "English" },
 ];
 
@@ -27,7 +26,6 @@ export const enLinks = [
     { route: "/now", menu: "Now" },
     { route: "/about", menu: "About me" },
     { route: "/posts", menu: "Posts"},
-    { route: "/rss.xml", menu: "RSS" },
     { route: "/es", menu: "Español" },
 ];
 
