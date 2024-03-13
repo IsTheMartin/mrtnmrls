@@ -17,7 +17,6 @@ export const esLinks = [
     { route: "/es", menu: "Inicio" },
     { route: "/es/now", menu: "Ahora" },
     { route: "/es/about", menu: "Sobre mí" },
-    { route: "/es/posts", menu: "Posts"},
     { route: "/", menu: "English" },
 ];
 
@@ -25,8 +24,25 @@ export const enLinks = [
     { route: "/", menu: "Home" },
     { route: "/now", menu: "Now" },
     { route: "/about", menu: "About me" },
-    { route: "/posts", menu: "Posts"},
     { route: "/es", menu: "Español" },
+];
+
+export const englishNavLinks = [
+    { route: "/now", menu: "Now" },
+    { route: "/about", menu: "About me" },
+    { route: "/uses", menu: "Uses"},
+    { route: "/posts", menu: "Posts"},
+    { route: "/rss.xml", menu: "Subscribe"},
+    { route: "/es", menu: "Español" }
+];
+
+export const spanishNavLinks = [
+    { route: "/es/now", menu: "Ahora" },
+    { route: "/es/about", menu: "Acerca" },
+    { route: "/es/uses", menu: "Usos"},
+    { route: "/es/posts", menu: "Posts"},
+    { route: "/rss.xml", menu: "Subscribirse"},
+    { route: "/", menu: "English" }
 ];
 
 export const socialLinks = [
