@@ -9,7 +9,7 @@ export default defineConfig({
   output: "server",
   adapter: netlify(),
   i18n: {
-    defaultLocale: "es",
+    defaultLocale: "en",
     locales: ["es", "en"]
   }
 });
