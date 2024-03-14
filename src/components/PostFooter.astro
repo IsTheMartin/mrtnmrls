@@ -1,32 +1,13 @@
 ---
 import "@styles/global.css";
 import Social from "@components/Social.astro";
+import { esLinks, enLinks, socialLinks } from "src/constants";
 
 interface Props {
   lang: string;
 }
 
 const { lang } = Astro.props;
-
-const esLinks = [
-  { route: "/", menu: "Inicio" },
-  { route: "/now", menu: "Ahora" },
-  { route: "/about", menu: "Sobre mí" },
-  { route: "/en", menu: "English" },
-];
-
-const enLinks = [
-  { route: "/en", menu: "Home" },
-  { route: "/en/now", menu: "Now" },
-  { route: "/en/about", menu: "About me" },
-  { route: "/", menu: "Español" },
-];
-
-const socialLinks = [
-  { platform: "instagram", username: "isthemartin" },
-  { platform: "github", username: "IsTheMartin" },
-  { platform: "goodreads", username: "isthemartin" },
-];
 
 let links = esLinks;
 if (lang == "en") {

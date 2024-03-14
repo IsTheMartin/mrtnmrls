@@ -4,7 +4,7 @@ import PostHeader from "@components/PostHeader.astro";
 import PostLayout from "@layouts/PostLayout.astro";
 import { getLastPostByLanguage } from "src/functions";
 
-const latestPost = await getLastPostByLanguage("en");
+const latestPost = await getLastPostByLanguage("es");
 const { Content } = await latestPost.render();
 ---
 

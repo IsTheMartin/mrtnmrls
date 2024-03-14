@@ -1,36 +1,34 @@
 ---
-import "@styles/global.css"
+import "@styles/global.css";
 import Layout from "@layouts/Layout.astro";
-import Home from "@components/Home.astro";
+import PostHeader from "@components/PostHeader.astro";
 
-const title = "Qué hago en estos momentos?";
-const lang = "es";
+const title = "What I'm doing now?";
+const date = new Date("2024-03-12");
+const lang = "en";
 ---
 
 <Layout title={title} lang={lang}>
-    <main>
-        <Home title={title} lang={lang} />
-        <ul>
-            <li>
-                Continuo con el <a href="https://www.royalcaribbean.com/">proyecto de los cruceros</a>
-            </li>
-            <li>
-                Planeo mi siguiente viaje a un lugar muy especial
-            </li>
-            <li>
-                El equipo sigue invicto en el torneo de volleyball. Quedan tres partidos para terminar la primera ronda
-            </li>
-            <li>
-                Leyendo <a href="https://www.goodreads.com/book/show/147483.Rebeli_n_en_la_granja">Rebelión en la granja</a>
-            </li>
-            <li>
-                Operación Kasacho (primer intento fallido)
-            </li>
-            <li>
-                Sigo con mejoras para este sitio
-            </li>
-        </ul>
-        <br />
-        <p>Actualizado el 26 de Febrero de 2024</p>
-    </main>
+  <main>
+    <PostHeader title={title} date={date} lang={lang} />
+    <ul>
+      <li>
+        I'm still working on <a href="https://www.royalcaribbean.com/"
+          >cruises project</a
+        >
+      </li>
+      <li>Planning my next trip to special place (coming month)</li>
+      <li>
+        Volleyball team remains undefeated, three more matches to finish the
+        first round
+      </li>
+      <li>
+        Reading <a href="https://www.goodreads.com/book/show/170448.Animal_Farm"
+          >Animal farm</a
+        >
+      </li>
+      <li>Kasacho operation (first attempt failed)</li>
+      <li>I'm still developing this site</li>
+    </ul>
+  </main>
 </Layout>

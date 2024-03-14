@@ -25,14 +25,13 @@
 }
 
 :root {
-    --bg: #DDF2FD;
+    --dark-blue: #101e27;
+    --midnight-blue: #0c181f;
     --bgl: #DDF2FD;
-    --h: #9BBEC8;
-    --hl: #427D9D;
-    --bimg: #d2eefc;
-    --t: #444;
-    --tm: #888;
-    --tl: #F2F2F2;
+    --navy-blue: #203c4f;
+    --steel-blue: #4c6272;
+    --light-gray: #e8ebed;
+    --silver: #f2f2f2;
     --ff: "Poppins", "Iowan Old Style", "Iowan", "Georgia", serif;
     --fm: "SF Mono", Consolas, monospace;
     --fs: 14px;
@@ -50,13 +49,13 @@
     font-family: var(--ff);
     font-weight: var(--fw);
     font-style: var(--fst);
-    background: var(--bg);
-    color: var(--t);
+    background: var(--dark-blue);
+    color: var(--light-gray);
 }
 
 ::selection {
-    background: var(--h);
-    color: var(--t);
+    background: var(--navy-blue);
+    color: var(--light-gray);
 }
 
 body {
@@ -91,7 +90,7 @@ ul {
 
 h2 {
     font-size: calc(var(--fs)*var(--sl));
-    line-height: 1.3rem;
+    line-height: 1.2rem;
     font-weight: 600;
 }
 
@@ -104,7 +103,7 @@ h3 {
 main h2,
 main h3,
 pre {
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 h3,
@@ -126,7 +125,7 @@ a {
 main a,
 section a {
     text-decoration: underline;
-    text-decoration-color: var(--h);
+    text-decoration-color: var(--navy-blue);
     text-decoration-skip-ink: none;
     text-decoration-thickness: .1rem;
     transition: text-decoration .3s;
@@ -134,7 +133,7 @@ section a {
 
 main a:hover,
 section a:hover {
-    text-decoration-color: var(--hl);
+    text-decoration-color: var(--steel-blue);
 }
 
 h1>a {
@@ -142,8 +141,8 @@ h1>a {
 }
 
 h1>a:hover {
-    text-decoration-color: var(--hl);
-    color: var(--hl);
+    text-decoration-color: var(--steel-blue);
+    color: var(--steel-blue);
 }
 
 h1,
@@ -153,7 +152,8 @@ hr {
 
 h1 {
     font-size: calc(var(--fs)*var(--sx));
-    line-height: 1.3rem;
+    font-weight: 800;
+    line-height: 1.2rem;
     padding-bottom: .35rem;
     padding-top: .35rem;
 }
@@ -163,12 +163,13 @@ h3,
 h4,
 h5,
 h6 {
-    text-align: center;
+    text-align: left;
     margin-top: 2rem;
 }
 
 p+p {
     text-indent: 1rem;
+    margin-top: 0.5rem;
 }
 
 hr {
@@ -201,7 +202,7 @@ nav .current {
 
 code {
     font-family: var(--fm);
-    background: var(--tl);
+    background: var(--silver);
     font-size: calc(var(--fs)*var(--ss));
     line-height: .8rem;
 }
@@ -244,7 +245,7 @@ ul li {
 
 del {
     text-decoration: line-through;
-    text-decoration-color: var(--t);
+    text-decoration-color: var(--light-gray);
     text-decoration-thickness: 3px;
 }
 
@@ -290,7 +291,7 @@ figcaption {
 
 [data-template=with] .m-m {
     padding: 0.5rem;
-    background: var(--bimg);
+    background: var(--midnight-blue);
 }
 
 [data-template=with] .img {
@@ -349,7 +350,7 @@ nav>a {
 details>a:hover,
 nav>a:hover,
 summary:hover {
-    color: var(--hl);
+    color: var(--steel-blue);
 }
 
 nav a p {
@@ -365,7 +366,7 @@ nav hr {
     align-self: end;
     height: 1px;
     border: 0;
-    border-bottom: 1px dashed var(--t);
+    border-bottom: 1px dashed var(--light-gray);
     opacity: .25;
     min-width: 1rem;
     width: 100%;
@@ -391,7 +392,7 @@ summary {
     padding: .25rem .75rem;
     display: inline-block;
     margin-top: 1rem;
-    border: 1px solid var(--tl);
+    border: 1px solid var(--silver);
     border-radius: 999px;
     transition: color .3s linear;
     cursor: pointer;
@@ -412,7 +413,7 @@ footer a {
 
 .routes a:hover, 
 .social a:hover {
-    color: var(--hl);
+    color: var(--steel-blue);
 }
 
 .post-header {
@@ -425,7 +426,7 @@ footer a {
 
 @media (min-width: 500px) {
     :root {
-        --fs: 17px;
+        --fs: 16px;
         --fl: 32px;
     }
 }
