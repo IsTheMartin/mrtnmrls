@@ -1,24 +1,16 @@
 ---
 import "@styles/global.css";
 import Social from "@components/Social.astro";
-import { esLinks, enLinks, socialLinks } from "src/constants";
+import { socialLinks } from "src/constants";
 
 interface Props {
   lang: string;
 }
 
 const { lang } = Astro.props;
-
-let links = esLinks;
-if (lang == "en") {
-  links = enLinks;
-}
 ---
 
 <footer>
-  <div class="routes">
-    {links.map((link) => <a href={link.route}>{link.menu}</a>)}
-  </div>
   <div class="social">
     {
       socialLinks.map((link) => (

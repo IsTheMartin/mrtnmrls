@@ -1,6 +1,8 @@
 ---
 import Thanks from "@components/Thanks.astro";
 import PostFooter from "@components/PostFooter.astro";
+import Navigation from "@components/Navigation.astro";
+import Header from "@components/Header.astro";
 interface Props {
 	title: string;
 	lang: string;
@@ -20,6 +22,8 @@ const { title, lang } = Astro.props;
 		<title>{title} | Martin</title>
 	</head>
 	<body>
+		<Header lang={lang} />
+		<Navigation lang={lang} />
 		<slot />
 		<Thanks lang={lang}/>
 		<PostFooter lang={lang}/>

@@ -1,5 +1,7 @@
 ---
+import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro"
+import Navigation from "@components/Navigation.astro";
 
 interface Props {
 	title: string;
@@ -20,6 +22,8 @@ const { title, lang } = Astro.props;
 		<title>{title} | Martin</title>
 	</head>
 	<body>
+		<Header lang={lang} />
+		<Navigation lang={lang} />
 		<slot />
 		<Footer lang={lang}/>
 	</body>

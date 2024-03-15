@@ -1,0 +1,14 @@
+---
+import "@styles/global.css";
+import { getHomeLink } from "src/functions";
+
+interface Props {
+	lang: string;
+}
+const { lang } = Astro.props;
+const homeLink = getHomeLink(lang);
+---
+
+<header class="main">
+    <a href={homeLink}>Martín Morales</a>
+</header>
