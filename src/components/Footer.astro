@@ -8,17 +8,9 @@ interface Props {
 }
 
 const { lang } = Astro.props;
-
-let links = esLinks;
-if (lang == "en") {
-  links = enLinks;
-}
 ---
 
 <footer>
-  <div class="routes">
-    {links.map((link) => <a href={link.route}>{link.menu}</a>)}
-  </div>
   <div class="social">
     {
       socialLinks.map((link) => (

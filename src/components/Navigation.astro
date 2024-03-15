@@ -1,33 +1,20 @@
 ---
 import "@styles/global.css";
-import { getCollection } from "astro:content";
-import FormattedDate from "./FormattedDate.astro";
+import { englishNavLinks, spanishNavLinks } from "src/constants";
 
 interface Props {
-	lang: String;
+  lang: String;
 }
 
 const { lang } = Astro.props;
-
-const posts = await getCollection("posts", ({ data }) => {
-    return data.lang == lang;
-});
-posts.sort((a, b) => Date.parse(b.data.pubDate.toString()) - Date.parse(a.data.pubDate.toString()));
+console.log(lang);
+const internalLinks = lang == "en" ? englishNavLinks : spanishNavLinks;
 ---
 
-<nav>
-    {
-        posts.map((post) => (
-            <a href={`/${post.slug}`}>
-                <p>{post.data.title}</p>
-                <hr />
-                <span>
-                    <FormattedDate
-                        date={post.data.pubDate}
-                        lang={post.data.lang}
-                    />
-                </span>
-            </a>
-        ))
-    }
+<nav class="links-container">
+  {
+    internalLinks.map((link) => (
+        <a href={link.route}>{link.menu}</a>
+    ))
+  }
 </nav>
