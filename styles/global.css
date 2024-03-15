@@ -433,7 +433,6 @@ nav.links-container {
 }
 
 nav.links-container a {
-    background-color: var(--midnight-blue);
     color: var(--light-gray);
     font-size: .8em;
     text-align: center;
