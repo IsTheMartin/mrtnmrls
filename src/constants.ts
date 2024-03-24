@@ -29,18 +29,18 @@ export const enLinks = [
 
 export const englishNavLinks = [
     { route: "/now", menu: "Now" },
+    { route: "/posts", menu: "Posts"},
     { route: "/about", menu: "About me" },
     { route: "/uses", menu: "Uses"},
-    { route: "/posts", menu: "Posts"},
     { route: "/rss.xml", menu: "Subscribe"},
     { route: "/es", menu: "Español" }
 ];
 
 export const spanishNavLinks = [
     { route: "/es/now", menu: "Ahora" },
+    { route: "/es/posts", menu: "Posts"},
     { route: "/es/about", menu: "Acerca" },
     { route: "/es/uses", menu: "Usos"},
-    { route: "/es/posts", menu: "Posts"},
     { route: "/rss.xml", menu: "Subscribirse"},
     { route: "/", menu: "English" }
 ];
