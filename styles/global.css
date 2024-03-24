@@ -463,6 +463,14 @@ nav.links-container a.active {
     margin-bottom: 0.1rem;
 }
 
+.copyright {
+    margin-bottom: 0.5rem;
+}
+
+.copyright > p {
+    font-size: calc(var(--fs)*var(--ss));
+}
+
 @media (min-width: 500px) {
     :root {
         --fs: 16px;
