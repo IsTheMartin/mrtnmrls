@@ -1,0 +1,88 @@
+---
+import Home from "@components/Home.astro";
+import Layout from "@layouts/Layout.astro";
+import noCookies from "../images/no-cookies.webp";
+
+const title = "Privacy";
+const lang = "en";
+---
+
+<Layout title={title} lang={lang}>
+  <main>
+    <Home title={title} lang={lang} />
+    <h2>Analytics</h2>
+    <p>
+      This website does not have a track tool for analytics currently and I'm
+      not interested to implement them.
+    </p>
+    <h3>Cookies</h3>
+    <p>
+      This website is cookie-free, so you shouldn't see any offensive messages
+      about accepting or rejecting cookies.
+    </p>
+    <p>
+      I've used the online tool <a href="https://www.cookiemetrix.com/"
+        >Cookie Metrix</a
+      > to verify.
+    </p>
+    <figure class="m-o" data-template="with">
+      <div class="m-m">
+        <img
+          src={noCookies.src}
+          alt="No cookies"
+          class="img"
+          loading="lazy"
+          style="aspect-ratio: 16 / 9;"
+        />
+      </div>
+      <figcaption>Cookie Metrix screenshot</figcaption>
+    </figure>
+    <h2>Terms of service</h2>
+    <p>
+      Many complex websites now offer services that require you to be signed up
+      for. It's not necessary on this site because I don't offer any services to
+      access, view, read, or copy the content.
+    </p>
+    <h2>License information</h2>
+    <p>
+      All the content is under the license <b
+        ><a href="https://creativecommons.org/licenses/by-sa/4.0/"
+          >CC BY-SA 4.0</a
+        ></b
+      >, this means:
+      <ul>
+        <li>
+          You are free to share, copy and redistribute the material in any
+          medium or format.
+        </li>
+        <li>
+          You are also free to adapt, remix, transform, and build upon the
+          material for any purpose, even commercially. However ...
+        </li>
+        <li>
+          You must provide attribution to the author (me) with a link back to
+          this website. An example attribution is below.
+        </li>
+        <li>
+          If you remix, transform, or build upon the material, you must
+          distribute your contributions under the same license as the original.
+        </li>
+        <li>
+          You may not apply legal terms or technological measures that legally
+          restrict others from doing anything the license permits.
+        </li>
+      </ul>
+    </p>
+    <h3>Attribution Example</h3>
+    <p>
+      An acceptable attribution that complies with the license would be
+      something similar to the following:
+    </p>
+    <pre>
+      <code class="language-html">
+          &lt;p&gt;Credits to &lt;a href="https://mrtnmrls.com"&gt;Martín Morales&lt;/a&gt; for original content.&lt;/p&gt;
+      </code>
+  </pre>
+  <p>Thank you to <a href="https://kevquirk.com">Kev Quirk</a> for his amazing privacy page.</p>
+  </main>
+</Layout>
