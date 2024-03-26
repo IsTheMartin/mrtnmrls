@@ -1,0 +1,64 @@
+---
+import Home from "@components/Home.astro";
+import Layout from "@layouts/Layout.astro";
+import noCookies from "../../images/no-cookies.webp";
+
+const title = "Privacidad";
+const lang = "es";
+---
+
+<Layout title={title} lang={lang}>
+  <main>
+    <Home title={title} lang={lang} />
+    <h2>Analíticas</h2>
+    <p>
+      Actualmente este espacio no dispone de herramientas de medición de
+      analíticas y no estoy interesado en incorporarlas.
+    </p>
+    <h3>Uso de Cookies</h3>
+    <p>
+      Este sitio se encuentra libre de cookies, por lo tanto no deberías ver
+      ningún molesto mensaje sobre aceptar o rechazar cookies.
+    </p>
+    <p>
+      He utilizado la herramienta en línea <a
+        href="https://www.cookiemetrix.com/">Cookie Metrix</a
+      > para corrobarlo.
+    </p>
+    <figure class="m-o" data-template="with">
+      <div class="m-m">
+        <img
+          src={noCookies.src}
+          alt="No cookies"
+          class="img"
+          loading="lazy"
+          style="aspect-ratio: 16 / 9;"
+        />
+      </div>
+      <figcaption>Screenshot de Cookie Metrix</figcaption>
+    </figure>
+    <h2>Términos de servicio</h2>
+    <p>
+      Actualmente muchos sitios complejos ofrecen servicios de los que tienes que estar al tanto. En este sitio no es necesario, ya que no ofrezco ningún servicio para acceder, ver, leer o copiar el contenido.
+    </p>
+    <h2>Información de licencia</h2>
+    <p>
+        Todo el contenido de este sitio web está bajo la licencia <b><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></b>, lo que significa que:
+        <ul>
+            <li>Eres libre de copiar, compartir o re-distribuir el contenido en cualquier forma o formato.</li>
+            <li>También eres libre de adaptar, mezclar, transformar y crear material para cualquier propósito, incluso el comercial, sin embargo ...</li>
+            <li>Debes de proveer una atribución al autor, o sea a mí, con un link que redirija al usuario este sitio web.</li>
+            <li>En caso de que mezcles, transformes o construyas material, debes distribuir tus contribuciones bajo la misma licencia que usa el contenido original.</li>
+            <li>No pueds aplicar términos legales o medidas tecnológicas que restrinjan legalmente a otros hacer cualquier cosa que la licencia permita.</li>
+        </ul>
+    </p>
+    <h3>Ejemplo de atribución</h3>
+    <p>Una buena atribución al autor sería la siguiente:</p>
+    <pre>
+        <code class="language-html">
+            &lt;p&gt;Créditos a &lt;a href="https://mrtnmrls.com"&gt;Martín Morales&lt;/a&gt; por el contenido original.&lt;/p&gt;
+        </code>
+    </pre>
+    <p>Gracias a <a href="https://kevquirk.com">Kev Quirk</a> por su asombrosa página de privacidad.</p>
+  </main>
+</Layout>

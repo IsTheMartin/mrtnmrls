@@ -52,9 +52,11 @@ export const socialLinks = [
 ];
 
 export const englishLegalLinks = [
+    { route: "/privacy", menu: "Privacy" },
     { route: "/disclaimer", menu: "Disclaimer" },
 ]
 
 export const spanishLegalLinks = [
-    { route: "/es/disclaimer", menu: "Descargo de responsabilidad" },
+    { route: "/es/privacy", menu: "Privacidad" },
+    { route: "/es/disclaimer", menu: "Descargo de responsabilidad" }
 ]

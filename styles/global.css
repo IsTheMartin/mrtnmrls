@@ -103,7 +103,7 @@ h3 {
 main h2,
 main h3,
 pre {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
 }
 
 h3,
@@ -168,8 +168,7 @@ h6 {
 }
 
 p+p {
-    text-indent: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
 }
 
 hr {
@@ -202,20 +201,20 @@ nav .current {
 
 code {
     font-family: var(--fm);
-    background: var(--silver);
+    background: var(--midnight-blue);
     font-size: calc(var(--fs)*var(--ss));
     line-height: .8rem;
 }
 
 pre:not(:first-child) {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
 pre code {
     font-size: calc(var(--fs)*var(--ss));
     line-height: .8rem;
     font-family: var(--fm);
-    padding: 1rem;
+    padding: 0.2rem;
     display: block;
     overflow-x: auto;
     white-space: pre;
