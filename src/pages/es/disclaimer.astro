@@ -1,0 +1,28 @@
+---
+import Home from "@components/Home.astro";
+import Layout from "@layouts/Layout.astro";
+
+const title = "Descargo de responsabilidad";
+const lang = "es";
+---
+
+<Layout title={title} lang={lang}>
+  <main>
+    <Home title={title} lang={lang} />
+    <p>
+      Este website es mi espacio digital personal donde puedo publicar mis
+      ideas, opiniones y pensamientos. El contenido expresado aquí es mío y no
+      de mi empleador.
+    </p>
+    <p>
+      En adición, mis pensamientos y opiniones pueden cambiar con el tiempo. Por
+      esta razón recomiendo tener mente abierta antes de leer el contenido y
+      entender que puede causar malentendidos. No soy un divulgador de la
+      verdad; solo trato de compartir mi punto de vista.
+    </p>
+    <p>
+      <b>Este descargo de responsabilidad está sujeto a cambios en cualquier
+        tiempo sin necesidad de notificar.</b>
+    </p>
+  </main>
+</Layout>

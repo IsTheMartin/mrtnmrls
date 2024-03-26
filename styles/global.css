@@ -451,7 +451,8 @@ nav.links-container a.active {
 }
 
 .routes a:hover, 
-.social a:hover {
+.social a:hover,
+.legal a:hover {
     color: var(--steel-blue);
 }
 
