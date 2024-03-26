@@ -1,0 +1,22 @@
+---
+import Home from "@components/Home.astro";
+import Layout from "@layouts/Layout.astro";
+
+const title = "Disclaimer";
+const lang = "en";
+---
+
+<Layout title={title} lang={lang}>
+  <main>
+    <Home title={title} lang={lang} />
+    <p>
+      This website is my personal digital space where I can publish my ideas,
+      opinions and thoughts. The content expressed here is my own and not those
+      my employer.
+    </p>
+    <p>
+        Furthermore, my thoughts and opinions are subject to change over time. For this reason, I advise opening your mind before reading and understanding that it might cause misunderstandings. I'm not a distributor of truth; I'm just trying to share my perspective.
+    </p>
+    <p><b>This disclaimer is subject to change at any time without notification.</b></p>
+  </main>
+</Layout>

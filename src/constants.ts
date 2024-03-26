@@ -50,3 +50,11 @@ export const socialLinks = [
     { platform: "github", username: "IsTheMartin" },
     { platform: "goodreads", username: "isthemartin" },
 ];
+
+export const englishLegalLinks = [
+    { route: "/disclaimer", menu: "Disclaimer" },
+]
+
+export const spanishLegalLinks = [
+    { route: "/es/disclaimer", menu: "Descargo de responsabilidad" },
+]

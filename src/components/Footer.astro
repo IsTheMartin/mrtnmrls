@@ -1,13 +1,14 @@
 ---
 import "@styles/global.css";
 import Social from "@components/Social.astro";
-import { socialLinks } from "src/constants";
+import { englishLegalLinks, socialLinks, spanishLegalLinks } from "src/constants";
 
 interface Props {
   lang: string;
 }
 
 const { lang } = Astro.props;
+const legalLinks = lang == "en" ? englishLegalLinks : spanishLegalLinks
 ---
 
 <footer>
@@ -22,6 +23,13 @@ const { lang } = Astro.props;
           All work licensed under <strong>CC BY-SA 4.0</strong> | © 2024 Martín Morales
         </p>
       )
+    }
+  </div>
+  <div class="legal">
+    {
+      legalLinks.map((link) => (
+        <a href={link.route}>{link.menu}</a>
+      ))
     }
   </div>
   <div class="social">
