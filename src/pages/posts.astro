@@ -12,18 +12,19 @@ const posts = await getPostsByLanguage(lang);
 ---
 
 <MinimalLayout title={title} lang={lang}>
-  <Home title={title} lang={lang} />
-  <nav>
-    {
-      posts.map((post) => (
-        <a href={`/${post.slug}`}>
-          <span>
-            <FormattedDate date={post.data.pubDate} lang={post.data.lang} />
-          </span>
-          <hr />
-          <p>{post.data.title}</p>
-        </a>
-      ))
-    }
-  </nav>
+  <main>
+    <Home title={title} lang={lang} />
+    <nav class="posts-container">
+      {
+        posts.map((post) => (
+          <a href={`/${post.slug}`} class="post-item">
+            <div class="post-item">
+              <p>{post.data.title}</p>
+              <FormattedDate date={post.data.pubDate} lang={post.data.lang} />
+            </div>
+          </a>
+        ))
+      }
+    </nav>
+  </main>
 </MinimalLayout>
